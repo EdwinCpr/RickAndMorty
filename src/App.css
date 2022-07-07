@@ -106,13 +106,20 @@ input:focus {
   margin-top: 2rem;
 }
 
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .card {
-  width: 17rem;
+  width: 15rem;
   margin: auto;
 }
 
 .card-img {
   position: relative;
+  width: 100%;
 }
 
 .card-img img {
@@ -169,4 +176,18 @@ input:focus {
 
   /************** Card ******************/
 
+  .component-card {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .card {
+    width: 20rem;
+  }
+
+  .card-flex {
+    flex-direction: unset;
+    gap: 1;
+    flex-wrap: wrap;
+  }
 }

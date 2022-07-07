@@ -9,19 +9,53 @@ function App() {
       <header id="header">
         <Hero />
       </header>
-      <main id="main">
-        <div className="component-data">
-          <div className="data-flex">
-            <Data Name={"Nombre"} Info={"Space Station"} />
-            <Data Name={"Tipo:"} Info={"Sin información"} />
-            <Data Name={"Dimensión:"} Info={"Sin detalle"} />
-            <Data Name={"Población:"} Info={"100"} />
-          </div>
+      <div className="component-data">
+        <div className="data-flex">
+          <Data Name={"Nombre"} Info={"Space Station"} />
+          <Data Name={"Tipo:"} Info={"Sin información"} />
+          <Data Name={"Dimensión:"} Info={"Sin detalle"} />
+          <Data Name={"Población:"} Info={"100"} />
         </div>
-        <div className="component-card">
-          <Card Status={"Muerto"} Name={"Adjudicador Rick"} Type={"Humano"} Info={"Sin información"} Episodes={1}/>
+      </div>
+      <div className="component-card">
+        <div className="card-flex">
+          <Card
+            Status={"Muerto"}
+            Name={"Adjudicador Rick"}
+            Type={"Humano"}
+            Info={"Sin información"}
+            Episodes={1}
+          />
+          <Card
+            Status={"Muerto"}
+            Name={"Adjudicador Rick"}
+            Type={"Humano"}
+            Info={"Sin información"}
+            Episodes={1}
+          />
+          <Card
+            Status={"Muerto"}
+            Name={"Adjudicador Rick"}
+            Type={"Humano"}
+            Info={"Sin información"}
+            Episodes={1}
+          />
+          <Card
+            Status={"Muerto"}
+            Name={"Adjudicador Rick"}
+            Type={"Humano"}
+            Info={"Sin información"}
+            Episodes={1}
+          />
+          <Card
+            Status={"Muerto"}
+            Name={"Adjudicador Rick"}
+            Type={"Humano"}
+            Info={"Sin información"}
+            Episodes={1}
+          />
         </div>
-      </main>
+      </div>
     </div>
   );
 }
