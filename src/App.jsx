@@ -1,22 +1,11 @@
-import { useState } from "react";
 import "./App.css";
-import HeaderImg from "./Components/Img/HeaderImg.png";
+import Hero from "./Components/Hero";
 
 function App() {
   return (
     <div className="App">
       <header id="header">
-        <div className="header-img">
-          <img src={HeaderImg} alt="" />
-        </div>
-        <div className="header-input">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search..."
-            id="input-search"
-          />
-        </div>
+        <Hero/>
       </header>
     </div>
   );
