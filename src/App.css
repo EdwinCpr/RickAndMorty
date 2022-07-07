@@ -1,0 +1,28 @@
+/*********** Universal *************/
+
+/************* Header ***************/
+
+#header {
+  position: relative;
+}
+
+#header img {
+  width: 100%;
+  height: 7rem;
+  object-fit: cover;
+}
+
+.header-input {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#input-search {
+  position: absolute;
+  bottom: 0;
+  padding: .2rem .4rem;
+  border-radius: 1rem;
+}
