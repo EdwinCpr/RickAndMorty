@@ -39,5 +39,5 @@ input:focus {
 .img-title {
   position: absolute;
   top: 0%;
-  width: 9rem;
+  max-width: 50%;
 }
