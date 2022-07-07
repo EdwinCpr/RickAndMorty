@@ -1,4 +1,29 @@
 /*********** Universal *************/
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-color: #05292E;
+  color: white;
+}
+
+.font-size-md {
+  font-size: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+input:focus {
+  outline: 0 none;
+}
+
+.padding-one {
+  padding: .5rem 0rem;
+}
 
 /************* Header ***************/
 
@@ -26,10 +51,6 @@
   border: 0;
 }
 
-input:focus {
-  outline: 0 none;
-}
-
 .header-title {
   display: flex;
   justify-content: center;
@@ -40,4 +61,32 @@ input:focus {
   position: absolute;
   top: 0%;
   max-width: 50%;
+}
+
+/*********** Data **************/
+
+.data {
+  background-color: #062226;
+  width: 8rem;
+  padding: 0rem .5rem;
+}
+
+.data-flex {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/************** Media query ***************/
+
+@media(min-width: 768px) {
+  #input-search {
+    width: 30rem;
+    padding: .8rem;
+  }
+
+  .header-img img {
+    height: 15rem;
+  }
 }
