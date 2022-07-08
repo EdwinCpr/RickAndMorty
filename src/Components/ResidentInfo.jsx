@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 const ResidentInfo = ({ Url }) => {
   const [character, setCharacter] = useState({});
