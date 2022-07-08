@@ -3,6 +3,7 @@ import "./App.css";
 import ResidentInfo from "./Components/ResidentInfo";
 import Location from "./Components/Location";
 import Hero from "./Components/Hero";
+import axios from "axios"
 
 function App() {
   const [character, setCharacter] = useState({})
