@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #05292E;
+  background-color: #1e183d;
   color: white;
 }
 
@@ -38,11 +38,11 @@ input:focus {
 }
 
 .background-primary {
-  background: #05292E;
+  background: #1e183d;
 }
 
 .background-secundary {
-  background-color: #062226;
+  background-color:#34296D;
 }
 
 .font-weight-none {
@@ -56,6 +56,7 @@ input:focus {
 
 .header-img img {
   width: 100%;
+  height: 13rem;
   object-fit: cover;
 }
 
@@ -86,43 +87,45 @@ input:focus {
   max-width: 50%;
 }
 
-/*********** Data **************/
+/*********** Location **************/
 
-.data {
+.Location {
   width: 8rem;
+  height: 6.5rem;
   padding: 0rem .5rem;
+  text-align: center;
 }
 
-.data-flex {
+.Location-flex {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/************* Card ***********/
+/************* ResidentInfo ***********/
 
-.component-card {
+.component-ResidentInfo {
   margin-top: 2rem;
 }
 
-.card-flex {
+.ResidentInfo-flex {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.card {
+.ResidentInfo {
   width: 15rem;
   margin: auto;
 }
 
-.card-img {
+.ResidentInfo-img {
   position: relative;
   width: 100%;
 }
 
-.card-img img {
+.ResidentInfo-img img {
   width: 100%;
 }
 
@@ -131,7 +134,7 @@ input:focus {
   padding-bottom: .5rem;
 }
 
-.card-status-flex {
+.ResidentInfo-status-flex {
   display: flex;
   gap: .6rem;
   position: absolute;
@@ -144,14 +147,14 @@ input:focus {
   border-bottom-right-radius: 15px;
 }
 
-.card-status-flex div {
+.ResidentInfo-status-flex div {
   width: .8rem;
   height: .8rem;
   border-radius: 50%;
   background: brown
 }
 
-.card-info {
+.ResidentInfo-info {
   padding: 1rem;
 }
 /************** Media query ***************/
@@ -165,27 +168,27 @@ input:focus {
   }
 
   .header-img img {
-    height: 15rem;
+    height: 17rem;
   }
 
-  /**************** Data *****************/
+  /**************** Location *****************/
 
-  .data {
+  .Location {
     padding: .5rem 1.5rem;
   }
 
-  /************** Card ******************/
+  /************** ResidentInfo ******************/
 
-  .component-card {
+  .component-ResidentInfo {
     width: 90%;
     margin: 2rem auto;
   }
 
-  .card {
+  .ResidentInfo {
     width: 20rem;
   }
 
-  .card-flex {
+  .ResidentInfo-flex {
     flex-direction: unset;
     gap: 1;
     flex-wrap: wrap;

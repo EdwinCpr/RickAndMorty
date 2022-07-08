@@ -1,61 +1,33 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import Card from "./Components/Card";
-import Data from "./Components/Data";
+import ResidentInfo from "./Components/ResidentInfo";
+import Location from "./Components/Location";
 import Hero from "./Components/Hero";
+import axios from "axios"
 
 function App() {
+  const [character, setCharacter] = useState({})
+  const random = Math.floor(Math.random()*126) + 1
+  useEffect(() => {
+    axios.get(`https://rickandmortyapi.com/api/location/${random}`)
+      .then(res => setCharacter(res.data))
+      .catch(error => console.log(error));
+  }, []);
+  console.log(character.residents)
   return (
     <div className="App">
       <header id="header">
         <Hero />
       </header>
-      <div className="component-data">
-        <div className="data-flex">
-          <Data Name={"Nombre"} Info={"Space Station"} />
-          <Data Name={"Tipo:"} Info={"Sin información"} />
-          <Data Name={"Dimensión:"} Info={"Sin detalle"} />
-          <Data Name={"Población:"} Info={"100"} />
+      <div className="component-Location">
+        <div className="Location-flex">
+          <Location Name={"Nombre"} Info={character.name} />
+          <Location Name={"Tipo:"} Info={character.type} />
+          <Location Name={"Dimensión:"} Info={character.dimension} />
+          <Location Name={"Población:"} Info={character.residents?.length} />
         </div>
       </div>
-      <div className="component-card">
-        <div className="card-flex">
-          <Card
-            Status={"Muerto"}
-            Name={"Adjudicador Rick"}
-            Type={"Humano"}
-            Info={"Sin información"}
-            Episodes={1}
-          />
-          <Card
-            Status={"Muerto"}
-            Name={"Adjudicador Rick"}
-            Type={"Humano"}
-            Info={"Sin información"}
-            Episodes={1}
-          />
-          <Card
-            Status={"Muerto"}
-            Name={"Adjudicador Rick"}
-            Type={"Humano"}
-            Info={"Sin información"}
-            Episodes={1}
-          />
-          <Card
-            Status={"Muerto"}
-            Name={"Adjudicador Rick"}
-            Type={"Humano"}
-            Info={"Sin información"}
-            Episodes={1}
-          />
-          <Card
-            Status={"Muerto"}
-            Name={"Adjudicador Rick"}
-            Type={"Humano"}
-            Info={"Sin información"}
-            Episodes={1}
-          />
-        </div>
-      </div>
+      <div className="component-ResidentInfo" />
     </div>
   );
 }

@@ -1,11 +1,11 @@
-import HeaderImg from "./Img/HeaderImg.png";
+import HeaderImgTwo from "./Img/HeaderImgTwo.jpg";
 import HeaderImgTitle from "./Img/HeaderImgTitle.png";
 
 const Hero = () => {
   return (
     <div>
       <div className="header-img">
-        <img src={HeaderImg} alt="" />
+        <img src={HeaderImgTwo} alt="" />
       </div>
       <div className="header-title">
         <img src={HeaderImgTitle} alt="" className="img-title" />

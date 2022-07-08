@@ -1,7 +1,7 @@
-const Data = ({Name, Info}) => {
+const Location = ({Name, Info}) => {
   return (
     <div>
-      <div className="data background-secundary">
+      <div className="Location background-secundary">
         <div>
           <p className="font-size-md bold">{Name}</p>
           <p className="padding-primary">{Info}</p>
@@ -11,4 +11,4 @@ const Data = ({Name, Info}) => {
   );
 };
 
-export default Data;
+export default Location;
