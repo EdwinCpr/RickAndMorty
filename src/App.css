@@ -89,14 +89,14 @@ input:focus {
 
 /*********** Location **************/
 
-.Location {
+.location {
   width: 8rem;
   height: 6.5rem;
   padding: 0rem .5rem;
   text-align: center;
 }
 
-.Location-flex {
+.location-flex {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -105,27 +105,32 @@ input:focus {
 
 /************* ResidentInfo ***********/
 
-.component-ResidentInfo {
-  margin-top: 2rem;
+.component-residentinfo {
+  margin: 2rem 0rem;
+  display: flex;
 }
 
-.ResidentInfo-flex {
+.residentinfo-flex {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  margin: auto; 
+  gap: 2rem
 }
 
-.ResidentInfo {
+.residentinfo {
   width: 15rem;
   margin: auto;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
-.ResidentInfo-img {
+.residentinfo-img {
   position: relative;
   width: 100%;
 }
 
-.ResidentInfo-img img {
+.residentinfo-img img {
+  border-top-right-radius: 1rem;
   width: 100%;
 }
 
@@ -134,7 +139,7 @@ input:focus {
   padding-bottom: .5rem;
 }
 
-.ResidentInfo-status-flex {
+.residentinfo-status-flex {
   display: flex;
   gap: .6rem;
   position: absolute;
@@ -145,18 +150,20 @@ input:focus {
   width: 9rem;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  background-color: #34296de0;
 }
 
-.ResidentInfo-status-flex div {
+.residentinfo-status-flex div {
   width: .8rem;
   height: .8rem;
   border-radius: 50%;
   background: brown
 }
 
-.ResidentInfo-info {
+.residentinfo-info {
   padding: 1rem;
 }
+
 /************** Media query ***************/
 
 @media(min-width: 768px) {
@@ -173,24 +180,23 @@ input:focus {
 
   /**************** Location *****************/
 
-  .Location {
+  .location {
     padding: .5rem 1.5rem;
   }
 
   /************** ResidentInfo ******************/
 
-  .component-ResidentInfo {
+  .component-residentinfo {
     width: 90%;
     margin: 2rem auto;
   }
 
-  .ResidentInfo {
+  .residentinfo {
     width: 20rem;
   }
 
-  .ResidentInfo-flex {
+  .residentinfo-flex {
     flex-direction: unset;
-    gap: 1;
     flex-wrap: wrap;
   }
 }
