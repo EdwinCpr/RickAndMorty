@@ -6,16 +6,13 @@ const ResidentInfo = ({ Url }) => {
     axios
       .get(Url)
       .then((res) => setCharacter(res.data))
-      .catch((error) => console.log(error));
+      .catch((error) => setLoading(!loading));
   }, []);
   return (
     <>
       <div className="residentinfo background-secundary">
         <div className="residentinfo-img">
-          <img
-            src={character.image}
-            alt=""
-          />
+          <img src={character.image} alt="" />
           <div className="residentinfo-status">
             <div className="residentinfo-status-flex">
               <div></div>

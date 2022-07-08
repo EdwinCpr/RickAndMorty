@@ -4,7 +4,7 @@ const Location = ({Name, Info}) => {
       <div className="location background-secundary">
         <div>
           <p className="font-size-md bold">{Name}</p>
-          <p className="padding-primary">{Info}</p>
+          <p className="padding-primary font-size-small">{Info}</p>
         </div>
       </div>
     </div>

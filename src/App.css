@@ -34,7 +34,7 @@ input:focus {
 }
 
 .color-gray {
-  color: #535C5E;
+  color: #a5adaf;
 }
 
 .background-primary {
@@ -87,11 +87,15 @@ input:focus {
   max-width: 50%;
 }
 
+.loadin {
+  margin: auto;
+}
+
 /*********** Location **************/
 
 .location {
   width: 8rem;
-  height: 6.5rem;
+  height: 5.5rem;
   padding: 0rem .5rem;
   text-align: center;
 }
@@ -132,11 +136,14 @@ input:focus {
 .residentinfo-img img {
   border-top-right-radius: 1rem;
   width: 100%;
+  height: 15rem;
+  object-fit: cover;
 }
 
 .name {
   border-bottom: 1px solid #05292E;
   padding-bottom: .5rem;
+  color: #02B1C8;
 }
 
 .residentinfo-status-flex {
@@ -193,6 +200,7 @@ input:focus {
 
   .residentinfo {
     width: 20rem;
+    height: 34rem;
   }
 
   .residentinfo-flex {
