@@ -7,10 +7,11 @@ import Hero from "./Components/Hero";
 function App() {
   const [url, setUrl] = useState({});
   const [loading, setLoading] = useState(true);
+  const [value, setValue] = useState("")
   const random = Math.floor(Math.random() * 126) + 1;
+
   useEffect(() => {
-    axios
-      .get(`https://rickandmortyapi.com/api/location/${random}`)
+    axios.get(`https://rickandmortyapi.com/api/location/${random}`)
       .then((res) => {
         setUrl(res.data);
         setLoading(!loading);
@@ -20,13 +21,23 @@ function App() {
         setLoading(!loading);
       });
   }, []);
+  
   const residentL = url.residents?.length;
-  console.log(residentL);
+
+  const searchLocation = () => {
+    axios.get(`https://rickandmortyapi.com/api/location/${value}`)
+    .then((res) => {
+      setUrl(res.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+  }
   return (
     <div className="App">
       <>
         <header id="header">
-          <Hero />
+          <Hero searchLocation={searchLocation} value={value} setValue={setValue}/>
         </header>
         <div className="component-Location">
           {loading ? (
@@ -36,6 +47,7 @@ function App() {
                 <Location Name={"Tipo:"} Info={"Cargando..."} />
                 <Location Name={"Dimensión:"} Info={"Cargando..."} />
                 <Location Name={"Habitantes:"} Info={"Cargando..."} />
+                
               </div>
             </>
           ) : (
@@ -55,12 +67,14 @@ function App() {
           ) : (
             <div>
               {residentL === 0 ? (
-                <h1 className="loading">No se encontraron habitantes😔</h1>
+                  <h1 className="loading">No se encontraron habitantes😔</h1>
               ) : (
                 <>
                   <div className="residentinfo-flex">
                     {url.residents?.map((Url) => (
-                      <ResidentInfo Url={Url} key={Url.name} />
+                      <>
+                        <ResidentInfo Url={Url} key={Url.name} />
+                      </>
                     ))}
                   </div>
                 </>

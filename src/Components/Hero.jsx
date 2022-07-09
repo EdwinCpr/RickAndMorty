@@ -1,7 +1,7 @@
 import HeaderImgTwo from "./Img/HeaderImgTwo.jpg";
 import HeaderImgTitle from "./Img/HeaderImgTitle.png";
 
-const Hero = () => {
+const Hero = ({searchLocation, value, setValue}) => {
   return (
     <div>
       <div className="header-img">
@@ -14,10 +14,14 @@ const Hero = () => {
         <input
           type="text"
           name="search"
-          placeholder="Search..."
+          placeholder="Search for id..."
           id="input-search"
+          value={value}
+          onChange={((e) => setValue(e.target.value))}
         />
+        {value >= 1 && searchLocation()}
       </div>
+      
     </div>
   );
 };

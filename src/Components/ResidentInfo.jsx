@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
+import Status from "./Status";
 
 const ResidentInfo = ({ Url }) => {
   const [character, setCharacter] = useState({});
   useEffect(() => {
-    axios
-      .get(Url)
+    axios.get(Url)
       .then((res) => setCharacter(res.data))
       .catch((error) => console.log(error));
   }, []);
+
   return (
-    <>
+    <div>
       <div className="residentinfo background-secundary">
         <div className="residentinfo-img">
           <img src={character.image} alt="" />
           <div className="residentinfo-status">
             <div className="residentinfo-status-flex">
-              <div></div>
+              <Status character={character} />
               <p className="">{character.status}</p>
             </div>
           </div>
@@ -38,8 +39,11 @@ const ResidentInfo = ({ Url }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default ResidentInfo;
+
+
+// https://us05web.zoom.us/j/2168378039?pwd=Uk9leERITTJ0MWJKbDY5SjJ3L0p1dz09

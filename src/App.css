@@ -117,15 +117,15 @@ input:focus {
 .residentinfo-flex {
   display: flex;
   flex-direction: column;
-  margin: auto; 
-  gap: 2rem
+  gap: 2rem;
+  margin: auto;
 }
 
 .residentinfo {
-  width: 15rem;
-  margin: auto;
+  width: 18rem;
   border-bottom-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  margin: auto;
 }
 
 .residentinfo-img {
@@ -164,13 +164,26 @@ input:focus {
   width: .8rem;
   height: .8rem;
   border-radius: 50%;
-  background: brown
 }
 
 .residentinfo-info {
   padding: 1rem;
 }
 
+.brown {
+  background: brown;
+}
+
+.green {
+  background: green;
+}
+
+.gray {
+  background: gray;
+}
+
+.generate-azar {
+}
 /************** Media query ***************/
 
 @media(min-width: 768px) {
@@ -194,17 +207,18 @@ input:focus {
   /************** ResidentInfo ******************/
 
   .component-residentinfo {
-    width: 90%;
     margin: 2rem auto;
   }
 
   .residentinfo {
-    width: 20rem;
+    max-width: 90%;
     height: 34rem;
   }
 
   .residentinfo-flex {
-    flex-direction: unset;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
   }
 }
