@@ -20,6 +20,8 @@ function App() {
         setLoading(!loading);
       });
   }, []);
+  const residentL = url.residents?.length;
+  console.log(residentL);
   return (
     <div className="App">
       <>
@@ -33,7 +35,7 @@ function App() {
                 <Location Name={"Nombre"} Info={"Cargando..."} />
                 <Location Name={"Tipo:"} Info={"Cargando..."} />
                 <Location Name={"Dimensión:"} Info={"Cargando..."} />
-                <Location Name={"Población:"} Info={"Cargando..."} />
+                <Location Name={"Habitantes:"} Info={"Cargando..."} />
               </div>
             </>
           ) : (
@@ -42,21 +44,27 @@ function App() {
                 <Location Name={"Nombre"} Info={url.name} />
                 <Location Name={"Tipo:"} Info={url.type} />
                 <Location Name={"Dimensión:"} Info={url.dimension} />
-                <Location Name={"Población:"} Info={url.residents?.length} />
+                <Location Name={"Población:"} Info={residentL} />
               </div>
             </>
           )}
         </div>
         <div className="component-residentinfo">
           {loading ? (
-            <h1 className="loadin">Cargando, porfavor espere...</h1>
+            <h1 className="loading">Cargando, porfavor espere...</h1>
           ) : (
             <div>
-              <div className="residentinfo-flex">
-                {url.residents?.map((Url) => (
-                  <ResidentInfo Url={Url} key={Url.name} />
-                ))}
-              </div>
+              {residentL === 0 ? (
+                <h1 className="loading">No se encontraron habitantes😔</h1>
+              ) : (
+                <>
+                  <div className="residentinfo-flex">
+                    {url.residents?.map((Url) => (
+                      <ResidentInfo Url={Url} key={Url.name} />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           )}
         </div>

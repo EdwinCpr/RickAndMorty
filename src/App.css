@@ -87,8 +87,9 @@ input:focus {
   max-width: 50%;
 }
 
-.loadin {
+.loading {
   margin: auto;
+  text-align: center;
 }
 
 /*********** Location **************/

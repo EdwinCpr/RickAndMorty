@@ -6,7 +6,7 @@ const ResidentInfo = ({ Url }) => {
     axios
       .get(Url)
       .then((res) => setCharacter(res.data))
-      .catch((error) => setLoading(!loading));
+      .catch((error) => console.log(error));
   }, []);
   return (
     <>
