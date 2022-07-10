@@ -72,9 +72,7 @@ function App() {
                 <>
                   <div className="residentinfo-flex">
                     {url.residents?.map((Url) => (
-                      <>
-                        <ResidentInfo Url={Url} key={Url.name} />
-                      </>
+                        <ResidentInfo Url={Url} key={Url} />
                     ))}
                   </div>
                 </>
