@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+input {
+  outline: none;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  border-left: 1px solid #027b85;
+  width: .7rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #027b85;
+  border: #fff;
+  border-radius: 20px;
+}
+
+.rickandmorty-hero img {
+  width: 100%;
+  object-fit: cover;
+  transition: 800ms;
+  animation: isVisible 2s ease;
+}
+
+.rickandmorty-hero img:hover {
+  border-radius: 100%;
+}
+
+.rickandmorty-search {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.info-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  margin: 1rem auto;
+  row-gap: 1.5rem;
+  width: 10rem;
+  justify-content: center;
+  animation: isVisible 2s ease;
+}
+
+
+@keyframes isVisible {
+  0% {
+      transform: scale(0%);
+  }
+
+  100% {
+      transform: scale(100%);
+  }
+}
+
+.errors-message {
+  text-align: center;
+  padding: 5rem 0rem;
+}
+
+@media(min-width: 479px) {
+  .rickandmorty-hero img {
+    height: 18rem;
+  }
+}
+
+@media(min-width: 768px) {
+  .rickandmorty-hero img {
+    height: 23rem;
+  }
+
+  .info-flex {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem
+  }
+}
+
+@media(min-width: 1024px) {
+  .rickandmorty-hero img {
+    height: 22rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem
+  }
+}

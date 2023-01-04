@@ -1,0 +1,124 @@
+.card {
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    width: 15rem;
+    animation: cardK 30s ease-out infinite;
+    position: relative;
+}
+
+@keyframes cardK {
+    0% {
+        box-shadow: 1px 1px 20px 10px #027b85;
+    }
+
+    10% {
+        box-shadow: 1px 1px 20px 10px #e48f44;
+    }
+
+    20% {
+        box-shadow: 1px 1px 20px 10px #027b85;
+    }
+
+    30% {
+        box-shadow: 1px 1px 20px 10px #e48f44;
+    }
+
+    40% {
+        box-shadow: 1px 1px 20px 10px #027b85;
+    }
+
+    50% {
+        box-shadow: 1px 1px 20px 10px #e48f44;
+    }
+
+    60% {
+        box-shadow: 1px 1px 20px 10px #027b85;
+    }
+
+    70% {
+        box-shadow: 1px 1px 20px 10px #e48f44;
+    }
+
+    80% {
+        box-shadow: 1px 1px 20px 10px #027b85;
+    }
+
+    90% {
+        box-shadow: 1px 1px 20px 10px #e48f44;
+    }
+
+    100% {
+        box-shadow: 1px 1px 20px 10px #027b85;
+
+    }
+}
+
+.card-status {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    background-color: #fff;
+    padding: .1rem 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.status-flex {
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+.status-dead {
+    width: .7rem;
+    height: .7rem;
+    background-color: #ff0000;
+    border-radius: 100%;
+}
+
+.status-alive {
+    width: .7rem;
+    height: .7rem;
+    background-color: #008000;
+    border-radius: 100%;
+}
+
+.status-unknown {
+    width: .7rem;
+    height: .7rem;
+    background-color: #808080;
+    border-radius: 100%;
+}
+
+.card-image {
+    text-align: center;
+}
+
+.card-image img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 15rem;
+}
+
+.card-name {
+    text-align: center;
+    margin: 1rem;
+}
+
+.card-name h2 {
+    color: #027b85;
+}
+
+.card-more-info {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    color: #027b85;
+}
+
+span {
+    color: #000;
+}

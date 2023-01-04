@@ -1,0 +1,56 @@
+.footer {
+    padding: 1rem 0rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.heart {
+    animation: heartK 8s ease-out infinite;
+}
+
+@keyframes heartK {
+    0% {
+        color: #027b85;
+    }
+
+    10% {
+        color: #e48f44;
+    }
+
+    20% {
+        color: #027b85;
+    }
+
+    30% {
+        color: #e48f44;
+    }
+
+    40% {
+        color: #027b85;
+    }
+
+    50% {
+        color: #e48f44;
+    }
+
+    60% {
+        color: #027b85;
+    }
+
+    70% {
+        color: #e48f44;
+    }
+
+    80% {
+        color: #027b85;
+    }
+
+    90% {
+        color: #e48f44;
+    }
+
+    100% {
+        color: #027b85;
+
+    }
+}
